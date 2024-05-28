@@ -1,0 +1,20 @@
+.media-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .media-column {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .media-column h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .media-column div {
+    margin-bottom: 20px;
+  }
+  

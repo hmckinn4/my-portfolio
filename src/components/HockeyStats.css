@@ -1,0 +1,37 @@
+/* src/components/HockeyStats.css */
+.hockey-stats-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.hockey-stats-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hockey-stats-preview iframe {
+  width: 100%; /* Set to full width */
+  max-width: 1100px; /* Set a maximum width similar to the container */
+  height: 500px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.hockey-stats-container p {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.hockey-stats-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.hockey-stats-container a:hover {
+  text-decoration: underline;
+}
