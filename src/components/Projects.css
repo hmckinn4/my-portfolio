@@ -4,67 +4,66 @@
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-  }
+}
   
-  .project-section {
+.project-section {
     margin-bottom: 40px;
-  }
+}
   
-  .project-section h3 {
+.project-section h3 {
     margin-bottom: 10px;
     font-size: 1.5em;
     color: #333;
-  }
+}
   
-  .project-subsection {
+.project-subsection {
     margin-top: 10px;
-  }
+}
   
-  .project-subsection h4 {
+.project-subsection h4 {
     margin-bottom: 5px;
     font-size: 1.2em;
     color: #666;
-  }
+}
   
-  .project-links {
+.project-links {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
   
-  .project-links a {
+.project-links a {
     color: #007bff;
     text-decoration: none;
     margin-bottom: 10px;
     font-size: 1.1em;
-  }
+}
   
-  .project-links a:hover {
+.project-links a:hover {
     text-decoration: underline;
-  }
+}
   
-  .project-preview {
+.project-preview {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-  }
+}
   
-  .project-preview iframe {
-    width: 90%;
+.project-preview iframe {
+    width: 700px; /* Set a fixed width for the iframe */
     height: 500px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+}
   
-  .video-link::after {
-    content: ' (Video)';
+.video-link::after {
+    content: ' ';
     color: #007bff;
-  }
+}
   
-  .repo-link::after {
-    content: ' (Repository)';
+.repo-link::after {
+    content: ' ';
     color: #007bff;
-  }
-  
+}
