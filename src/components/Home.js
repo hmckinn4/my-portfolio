@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Home.css'; // Import the CSS file for styling
 import headshot from '../assets/Headshot.jpeg'; // Import the headshot image
 import hockey from '../assets/hockey_photo2.JPG'; // Import the hockey image
-import resume from '../assets/HENRY MCKINNEY Software | Data.pdf'; // Import the resume
+import resume from '../assets/HENRY MCKINNEY Resume.pdf'; // Import the resume
 
 const Home = () => {
   const [metaPrice, setMetaPrice] = useState('Loading...');

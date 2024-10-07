@@ -1,0 +1,117 @@
+### Documentation for Fixing Client-Side Routing and Permissions Issues for React App with Nginx on AWS EC2
+
+**Objective:** Resolve 500 Internal Server Error and 403 Forbidden errors when accessing a React application hosted on an AWS EC2 instance with Nginx.
+
+#### Step-by-Step Guide
+
+1. **Verify Backend Availability**
+
+   Ensure your application backend is running and accessible:
+
+   ```bash
+   curl http://localhost:3000
+   ```
+
+   This should return the HTML content of your React app.
+
+2. **Check Nginx Configuration**
+
+   Ensure the Nginx configuration file is correct. Below is the configuration used:
+
+   ```nginx
+   server {
+       listen 80;
+       server_name henrymckinney.com www.henrymckinney.com;
+
+       root /home/ec2-user/my-portfolio/build;
+       index index.html;
+
+       location / {
+           try_files $uri $uri/ /index.html;
+           proxy_pass http://localhost:3000;
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection 'upgrade';
+           proxy_set_header Host $host;
+           proxy_cache_bypass $http_upgrade;
+       }
+
+       location /static/ {
+           alias /home/ec2-user/my-portfolio/build/static/;
+       }
+   }
+
+   server {
+       listen 443 ssl;
+       server_name henrymckinney.com www.henrymckinney.com;
+
+       ssl_certificate /etc/letsencrypt/live/henrymckinney.com/fullchain.pem;
+       ssl_certificate_key /etc/letsencrypt/live/henrymckinney.com/privkey.pem;
+       include /etc/letsencrypt/options-ssl-nginx.conf;
+       ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+       root /home/ec2-user/my-portfolio/build;
+       index index.html;
+
+       location / {
+           try_files $uri $uri/ /index.html;
+           proxy_pass http://localhost:3000;
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection 'upgrade';
+           proxy_set_header Host $host;
+           proxy_cache_bypass $http_upgrade;
+       }
+
+       location /static/ {
+           alias /home/ec2-user/my-portfolio/build/static/;
+       }
+   }
+   ```
+
+3. **Set Correct Permissions**
+
+   Ensure that Nginx has the correct permissions to access the files in the build directory and all parent directories.
+
+   Run the following commands to set the correct ownership and permissions:
+
+   ```bash
+   sudo chown -R nginx:nginx /home/ec2-user/my-portfolio
+   sudo chmod -R 755 /home/ec2-user/my-portfolio
+   sudo chmod 755 /home/ec2-user
+   ```
+
+4. **Restart Nginx**
+
+   After setting the correct permissions, restart Nginx to apply the changes:
+
+   ```bash
+   sudo systemctl restart nginx
+   ```
+
+5. **Verify Nginx Configuration**
+
+   Ensure there are no syntax errors in the Nginx configuration:
+
+   ```bash
+   sudo nginx -t
+   ```
+
+6. **Check Nginx Error Logs**
+
+   If you encounter any issues, check the Nginx error logs for detailed error messages:
+
+   ```bash
+   sudo tail -f /var/log/nginx/error.log
+   ```
+
+### Commands Run
+
+```bash
+sudo chown -R nginx:nginx /home/ec2-user/my-portfolio
+sudo chmod -R 755 /home/ec2-user/my-portfolio
+sudo chmod 755 /home/ec2-user
+sudo systemctl restart nginx
+```
+
+By following these steps, the 500 Internal Server Error and 403 Forbidden errors were resolved, allowing the React application to be served correctly by Nginx on the AWS EC2 instance.
