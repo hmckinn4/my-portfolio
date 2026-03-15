@@ -45,13 +45,13 @@ const Home = () => {
     <div className="home-container">
       <h1>Welcome to My Website</h1>
       <p>Hi, I'm Henry McKinney. I love software, finance, data, and sports, specifically hockey.</p>
-      <p>Navigate the links above to view my software projects, data analyses, hockey stats or highlights, or general accomplishments.</p>
+      <p>Navigate the links above to view my software projects, data analyses, hockey stats or hockey highlights, or general accomplishments.</p>
       <p>Scroll to the bottom for contact info and GitHub. </p>
+      <a href={resume} target="_blank" rel="noopener noreferrer" className="resume-link">View My Resume</a>
       <div className="images-container">
         <img src={headshot} alt="Headshot" className="profile-image" />
         <img src={hockey} alt="Hockey" className="profile-image" />
       </div>
-      <a href={resume} target="_blank" rel="noopener noreferrer" className="resume-link">View My Resume</a>
       <div className="highlights-container">
         <h2>Brief Highlights</h2>
         <div className="highlight">
