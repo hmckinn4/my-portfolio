@@ -44,8 +44,8 @@ const Home = () => {
   return (
     <div className="home-container">
       <h1>Welcome to My Website</h1>
-      <p>Hi, I'm Henry McKinney. I love Software, Data, and Sports, specifically hockey.</p>
-      <p>Navigate the links above to view my software projects, data analyses, hockey stats or hockey highlights, or general accomplishments.</p>
+      <p>Hi, I'm Henry McKinney. I love software, finance, data, and sports, specifically hockey.</p>
+      <p>Navigate the links above to view my software projects, data analyses, hockey stats or highlights, or general accomplishments.</p>
       <p>Scroll to the bottom for contact info and GitHub. </p>
       <div className="images-container">
         <img src={headshot} alt="Headshot" className="profile-image" />
