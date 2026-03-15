@@ -42,4 +42,14 @@
   .achievement-links a:hover {
     text-decoration: underline;
   }
+
+  @media (max-width: 768px) {
+    .achievements-container {
+      padding: 10px;
+    }
+
+    .achievement-preview iframe {
+      height: 300px;
+    }
+  }
   

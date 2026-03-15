@@ -36,3 +36,13 @@
 .hockey-stats-container a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .hockey-stats-container {
+    padding: 10px;
+  }
+
+  .hockey-stats-preview iframe {
+    height: 350px;
+  }
+}

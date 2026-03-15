@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import Projects from './components/Projects';
@@ -9,16 +9,25 @@ import HockeyStats from './components/HockeyStats';
 import './App.css'; // Import the CSS file for styling
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <Router>
       <div className="app-container">
         <nav className="navbar">
-          <ul className="navbar-list">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/achievements">Achievements</Link></li>
-            <li><Link to="/media">Media</Link></li>
-            <li><Link to="/hockey-stats">Hockey Stats</Link></li>
+          <button
+            className="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation"
+          >
+            ☰
+          </button>
+          <ul className={`navbar-list ${menuOpen ? 'open' : ''}`}>
+            <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+            <li><Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link></li>
+            <li><Link to="/achievements" onClick={() => setMenuOpen(false)}>Achievements</Link></li>
+            <li><Link to="/media" onClick={() => setMenuOpen(false)}>Media</Link></li>
+            <li><Link to="/hockey-stats" onClick={() => setMenuOpen(false)}>Hockey Stats</Link></li>
           </ul>
         </nav>
         <Routes>

@@ -3,18 +3,39 @@
     justify-content: space-between;
     padding: 20px;
   }
-  
+
   .media-column {
     flex: 1;
     margin: 10px;
   }
-  
+
   .media-column h2 {
     text-align: center;
     margin-bottom: 20px;
   }
-  
+
   .media-column div {
     margin-bottom: 20px;
+  }
+
+  .responsive-iframe {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (max-width: 768px) {
+    .media-container {
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .media-column {
+      margin: 5px 0;
+    }
+
+    .responsive-iframe {
+      max-width: 100%;
+    }
   }
   

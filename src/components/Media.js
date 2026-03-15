@@ -9,8 +9,7 @@ const Media = () => {
         <div>
           <h3>France2 2023-2024 highlights</h3>
           <iframe
-            width="560"
-            height="315"
+            className="responsive-iframe"
             src="https://www.youtube.com/embed/ateSpX5uRd4"
             title="France2 2023-2024 highlights"
             frameBorder="0"
@@ -21,8 +20,7 @@ const Media = () => {
         <div>
           <h3>NCAA & USA Pro 2022-2023 highlights</h3>
           <iframe
-            width="560"
-            height="315"
+            className="responsive-iframe"
             src="https://www.youtube.com/embed/bFpEh1QdbsQ"
             title="NCAA & USA Pro 2022-2023 highlights"
             frameBorder="0"
@@ -33,8 +31,7 @@ const Media = () => {
         <div>
           <h3>NCAA Post Championship interview</h3>
           <iframe
-            width="560"
-            height="315"
+            className="responsive-iframe"
             src="https://www.youtube.com/embed/dgFHGfcE1Ic"
             title="NCAA Post Championship interview"
             frameBorder="0"
@@ -48,8 +45,7 @@ const Media = () => {
         <div>
           <h3>Website Feature Remodel Demo</h3>
           <iframe
-            width="560"
-            height="315"
+            className="responsive-iframe"
             src="https://www.youtube.com/embed/zZ0Ea3HKqBo"
             title="Another Video"
             frameBorder="0"
