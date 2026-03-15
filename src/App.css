@@ -57,3 +57,54 @@
 .contact-info a:hover {
   text-decoration: underline;
 }
+
+/* Hamburger button - hidden on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-list.open {
+    display: flex;
+  }
+
+  .navbar-list li {
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar-list li a {
+    padding: 12px 20px;
+    border-top: 1px solid #444;
+  }
+
+  .footer {
+    padding: 8px 10px;
+  }
+
+  .contact-info p {
+    font-size: 0.9em;
+  }
+}

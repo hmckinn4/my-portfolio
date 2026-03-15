@@ -62,4 +62,24 @@
     font-weight: bold;
     text-decoration: underline;
   }
+
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 10px;
+    }
+
+    .images-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-image {
+      width: 80%;
+      max-width: 200px;
+    }
+
+    .highlight {
+      padding: 12px;
+    }
+  }
   
