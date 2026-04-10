@@ -72,6 +72,15 @@ const Home = () => {
           </p>
           <p><a href="/pdf/MU_Stock_Pitch.pdf" target="_blank" rel="noopener noreferrer">Link to full Analysis</a></p>
         </div>
+        <div className="highlight">
+          <h3>Micron Stock Revisit</h3>
+          <p><span className="important">April 7, 2026 | Target $590</span> | Bull Target $885</p>
+          <p>
+            <span className="important">Current Price: {micronPrice}</span>
+            <a href="https://finance.yahoo.com/quote/MU" target="_blank" rel="noopener noreferrer"> (View on Yahoo Finance)</a>
+          </p>
+          <p><a href="/pdf/MU_Revisit_2026.pdf" target="_blank" rel="noopener noreferrer">Link to full Analysis</a></p>
+        </div>
       </div>
     </div>
   );

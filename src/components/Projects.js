@@ -30,6 +30,17 @@ const Projects = () => {
               <a href="/pdf/MU_Stock_Pitch.pdf" target="_blank" rel="noopener noreferrer">MU Stock Pitch</a>
             </div>
           </div>
+          <div className="project-preview">
+            <iframe
+              src="/pdf/MU_Revisit_2026.pdf"
+              title="MU Revisit 2026"
+              width="100%"
+              height="500px"
+            ></iframe>
+            <div className="project-links">
+              <a href="/pdf/MU_Revisit_2026.pdf" target="_blank" rel="noopener noreferrer">MU Revisit 2026</a>
+            </div>
+          </div>
         </div>
       </div>
       <div className="project-section">
