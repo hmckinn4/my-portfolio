@@ -48,9 +48,17 @@ const Home = () => {
       <p>Navigate the links above to view my software projects, data analyses, hockey stats or hockey highlights, or general accomplishments.</p>
       <p>Scroll to the bottom for contact info and GitHub. </p>
       <a href={resume} target="_blank" rel="noopener noreferrer" className="resume-link">View My Resume</a>
-      <div className="images-container">
-        <img src={headshot} alt="Headshot" className="profile-image" />
-        <img src={hockey} alt="Hockey" className="profile-image" />
+      <div className="top-row-container">
+        <div className="recent-work">
+          <h4 className="recent-work-label">RECENT WORK</h4>
+          <a href="/pdf/MU_Revisit_2026.pdf" target="_blank" rel="noopener noreferrer">
+            Micron Stock Analysis — April 7, 2026
+          </a>
+        </div>
+        <div className="images-container">
+          <img src={headshot} alt="Headshot" className="profile-image" />
+          <img src={hockey} alt="Hockey" className="profile-image" />
+        </div>
       </div>
       <div className="highlights-container">
         <h2>Brief Highlights</h2>
