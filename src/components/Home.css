@@ -14,8 +14,8 @@
     position: absolute;
     left: 40px;
     top: 0;
-    text-align: left;
-    width: 200px;
+    text-align: center;
+    width: 260px;
   }
 
   .recent-work-label {
@@ -24,17 +24,18 @@
     text-transform: uppercase;
     font-variant: small-caps;
     letter-spacing: 1px;
-    font-size: 14px;
-    margin: 0 0 10px 0;
+    font-size: 16px;
+    margin: 0 0 12px 0;
     border-bottom: 2px solid #c41e3a;
-    padding-bottom: 5px;
+    padding-bottom: 6px;
   }
 
   .recent-work a {
     color: #333;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.4;
+    white-space: nowrap;
   }
 
   .recent-work a:hover {
