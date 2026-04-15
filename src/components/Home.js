@@ -54,6 +54,9 @@ const Home = () => {
           <a href="/pdf/MU_Revisit_2026.pdf" target="_blank" rel="noopener noreferrer">
             Micron Stock Analysis — April 7, 2026
           </a>
+          <a href="https://semilens.vercel.app/" target="_blank" rel="noopener noreferrer">
+            Semiconductor Financial Terminal
+          </a>
         </div>
         <div className="images-container">
           <img src={headshot} alt="Headshot" className="profile-image" />
