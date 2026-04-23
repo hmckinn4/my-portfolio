@@ -57,7 +57,7 @@ const Home = () => {
           <a href="https://semilens.vercel.app/" target="_blank" rel="noopener noreferrer">
             Semiconductor Financial Terminal
           </a>
-          <a href="/pdf/Micron_Pre_Q3_Outlook.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/pdf/Micron-Pre-Q3_Earnings_Outlook.pdf" target="_blank" rel="noopener noreferrer">
             Micron Cycle Watch: Pre-Q3 Outlook — April 22, 2026
           </a>
         </div>
