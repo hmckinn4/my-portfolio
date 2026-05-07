@@ -60,6 +60,9 @@ const Home = () => {
           <a href="/pdf/Micron-Pre-Q3_Earnings_Outlook.pdf" target="_blank" rel="noopener noreferrer">
             Micron Cycle Watch: Pre-Q3 Outlook — April 22, 2026
           </a>
+          <a href="/pdf/Visibility_Valuations_and_Cycles.pdf" target="_blank" rel="noopener noreferrer">
+            Visibility, Valuations, and Cycles — May 6th, 2026
+          </a>
         </div>
         <div className="images-container">
           <img src={headshot} alt="Headshot" className="profile-image" />
